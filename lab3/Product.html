@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iPhone 17</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background: #050505;
+            color: white;
+            min-height: 100vh;
+        }
+
+        /* NAVBAR */
+        nav {
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 8%;
+            border-bottom: 1px solid #222;
+            background: rgba(5, 5, 5, 0.8);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 35px;
+            list-style: none;
+        }
+
+        nav a {
+            color: #aaa;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: white;
+        }
+
+        .buy-btn {
+            background: white;
+            color: black;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* HERO */
+        .hero {
+            min-height: calc(100vh - 70px);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 50px 10%;
+            overflow: hidden;
+        }
+
+        .hero-text {
+            width: 50%;
+        }
+
+        .tag {
+            color: #888;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: clamp(60px, 8vw, 110px);
+            line-height: 0.9;
+            margin-bottom: 25px;
+
+            background: linear-gradient(
+                90deg,
+                #fff,
+                #999,
+                #fff
+            );
+
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .hero-text p {
+            color: #aaa;
+            font-size: 18px;
+            line-height: 1.6;
+            max-width: 500px;
+            margin-bottom: 30px;
+        }
+
+        .explore {
+            display: inline-block;
+            padding: 15px 30px;
+            border-radius: 30px;
+            background: linear-gradient(90deg, #fff, #bbb);
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .explore:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px rgba(255,255,255,0.2);
+        }
+
+        /* PHONE */
+        .phone-area {
+            width: 40%;
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+
+        .glow {
+            position: absolute;
+            width: 350px;
+            height: 350px;
+            background: #5865f2;
+            filter: blur(120px);
+            opacity: 0.5;
+        }
+
+        .phone {
+            position: relative;
+            width: 230px;
+            height: 470px;
+            border: 8px solid #222;
+            border-radius: 45px;
+            background: linear-gradient(
+                145deg,
+                #151515,
+                #050505
+            );
+            box-shadow:
+                0 0 50px rgba(255,255,255,0.1),
+                inset 0 0 20px #333;
+            z-index: 2;
+        }
+
+        .dynamic-island {
+            position: absolute;
+            top: 12px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90px;
+            height: 25px;
+            background: #000;
+            border-radius: 20px;
+        }
+
+        .screen {
+            position: absolute;
+            inset: 7px;
+            border-radius: 35px;
+            background:
+                radial-gradient(circle at 30% 30%, #7c3aed, transparent 30%),
+                radial-gradient(circle at 70% 70%, #06b6d4, transparent 35%),
+                linear-gradient(145deg, #050505, #111);
+        }
+
+        .screen::after {
+            content: "17";
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 75px;
+            font-weight: bold;
+            color: rgba(255,255,255,0.9);
+        }
+
+        /* SPECS */
+        .specs {
+            position: absolute;
+            bottom: 25px;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+        }
+
+        .spec {
+            text-align: center;
+        }
+
+        .spec h3 {
+            font-size: 22px;
+        }
+
+        .spec p {
+            color: #777;
+            font-size: 13px;
+            margin-top: 5px;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 800px) {
+
+            nav ul {
+                display: none;
+            }
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                padding-top: 60px;
+            }
+
+            .hero-text {
+                width: 100%;
+            }
+
+            .hero-text p {
+                margin: 0 auto 30px;
+            }
+
+            .phone-area {
+                width: 100%;
+                margin-top: 60px;
+            }
+
+            .specs {
+                position: relative;
+                margin-top: 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo"> iPhone</div>
+
+        <ul>
+            <li><a href="#">Overview</a></li>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Specs</a></li>
+        </ul>
+
+        <a href="#" class="buy-btn">Buy</a>
+    </nav>
+
+
+    <section class="hero">
+
+        <div class="hero-text">
+
+            <div class="tag">The next generation</div>
+
+            <h1>iPhone<br>17</h1>
+
+            <p>
+                Meet the new iPhone 17.
+                Designed for the future with a stunning display,
+                powerful performance and an entirely new experience.
+            </p>
+
+            <a href="#" class="explore">
+                Explore iPhone 17 →
+            </a>
+
+        </div>
+
+
+        <div class="phone-area">
+
+            <div class="glow"></div>
+
+            <div class="phone">
+
+                <div class="screen"></div>
+
+                <div class="dynamic-island"></div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <div class="specs">
+
+        <div class="spec">
+            <h3>6.3"</h3>
+            <p>Display</p>
+        </div>
+
+        <div class="spec">
+            <h3>A19</h3>
+            <p>Chip</p>
+        </div>
+
+        <div class="spec">
+            <h3>48MP</h3>
+            <p>Camera</p>
+        </div>
+
+        <div class="spec">
+            <h3>5G</h3>
+            <p>Connectivity</p>
+        </div>
+
+    </div>
+
+</body>
+</html>

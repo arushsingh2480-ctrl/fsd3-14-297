@@ -4,7 +4,8 @@
   "description": "hyper text transfer protocol html - hyper text markup language css - cascade style sheet",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "dev": "nodemon prg5.js"
   },
   "keywords": [],
   "author": "",
