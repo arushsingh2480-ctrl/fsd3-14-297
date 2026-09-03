@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AirTag - Apple</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background-color: #ffffff;
+            color: #1d1d1f;
+        }
+
+        /* Navbar */
+        nav {
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 8%;
+            border-bottom: 1px solid #e5e5e5;
+            background: rgba(255, 255, 255, 0.9);
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #1d1d1f;
+            font-size: 15px;
+        }
+
+        .nav-links a:hover {
+            color: #0071e3;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 650px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(180deg, #ffffff, #f5f5f7);
+        }
+
+        .hero-content {
+            max-width: 900px;
+        }
+
+        .hero h1 {
+            font-size: 75px;
+            letter-spacing: -3px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 28px;
+            color: #6e6e73;
+            margin-bottom: 30px;
+        }
+
+        /* AirTag Design */
+        .airtag {
+            width: 280px;
+            height: 280px;
+            margin: 50px auto;
+            border-radius: 50%;
+            background: radial-gradient(circle at 35% 30%,
+                    #ffffff,
+                    #e4e4e4 55%,
+                    #bdbdbd);
+            box-shadow:
+                20px 30px 50px rgba(0, 0, 0, 0.2),
+                inset -8px -8px 20px rgba(0, 0, 0, 0.1),
+                inset 8px 8px 20px rgba(255, 255, 255, 0.8);
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .airtag-inner {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            background: linear-gradient(145deg, #f8f8f8, #cfcfcf);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow:
+                inset 5px 5px 10px rgba(255, 255, 255, 0.9),
+                inset -5px -5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .apple-symbol {
+            font-size: 45px;
+            margin-bottom: 8px;
+        }
+
+        .airtag-inner h3 {
+            font-size: 18px;
+            letter-spacing: 2px;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .btn {
+            padding: 13px 25px;
+            border-radius: 25px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .btn-primary {
+            background-color: #0071e3;
+            color: white;
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: #0071e3;
+            border: 1px solid #0071e3;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            transition: 0.3s;
+        }
+
+        /* Features */
+        .features {
+            padding: 100px 8%;
+            text-align: center;
+        }
+
+        .features h2 {
+            font-size: 45px;
+            margin-bottom: 60px;
+        }
+
+        .feature-container {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            width: 280px;
+            padding: 35px 25px;
+            background: #f5f5f7;
+            border-radius: 20px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .card .icon {
+            font-size: 45px;
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            font-size: 22px;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: #6e6e73;
+            line-height: 1.6;
+        }
+
+        /* CTA Section */
+        .cta {
+            background-color: #000;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .cta h2 {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+
+        .cta p {
+            font-size: 20px;
+            color: #a1a1a6;
+            margin-bottom: 30px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 25px;
+            background-color: #f5f5f7;
+            color: #6e6e73;
+        }
+
+        /* Responsive */
+        @media (max-width: 700px) {
+
+            .hero h1 {
+                font-size: 50px;
+            }
+
+            .hero p {
+                font-size: 20px;
+            }
+
+            .nav-links {
+                gap: 12px;
+            }
+
+            .nav-links a {
+                font-size: 13px;
+            }
+
+            .airtag {
+                width: 220px;
+                height: 220px;
+            }
+
+            .airtag-inner {
+                width: 140px;
+                height: 140px;
+            }
+
+            .features h2,
+            .cta h2 {
+                font-size: 35px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">● AirTag</div>
+
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#features">Features</a>
+            <a href="#buy">Buy</a>
+        </div>
+    </nav>
+
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <h1>AirTag</h1>
+
+            <p>Lose your knack for losing things.</p>
+
+            <!-- CSS AirTag -->
+            <div class="airtag">
+
+                <div class="airtag-inner">
+                    <div class="apple-symbol">●</div>
+                    <h3>AIR TAG</h3>
+                </div>
+
+            </div>
+
+            <div class="buttons">
+                <button class="btn btn-primary">Buy Now</button>
+
+                <button class="btn btn-secondary">
+                    Learn More
+                </button>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Features -->
+    <section class="features" id="features">
+
+        <h2>Small. Powerful. Easy to find.</h2>
+
+        <div class="feature-container">
+
+            <div class="card">
+                <div class="icon">📍</div>
+                <h3>Precision Finding</h3>
+                <p>
+                    Find your nearby items with precision
+                    and get directions to your AirTag.
+                </p>
+            </div>
+
+
+            <div class="card">
+                <div class="icon">🔊</div>
+                <h3>Play a Sound</h3>
+                <p>
+                    Make your AirTag play a sound and
+                    easily locate your belongings.
+                </p>
+            </div>
+
+
+            <div class="card">
+                <div class="icon">🔒</div>
+                <h3>Privacy Built In</h3>
+                <p>
+                    Your location data and privacy
+                    remain protected.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CTA -->
+    <section class="cta" id="buy">
+
+        <h2>Keep track of what matters.</h2>
+
+        <p>
+            Attach AirTag to your keys, bag, wallet,
+            or anything you don't want to lose.
+        </p>
+
+        <button class="btn btn-primary">
+            Get AirTag
+        </button>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>AirTag Inspired Product Landing Page | Designed with HTML & CSS</p>
+    </footer>
+
+</body>
+
+</html>

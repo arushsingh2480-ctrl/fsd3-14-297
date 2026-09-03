@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "brand": "Apple",
+    "model": "iPhone 15",
+    "price": 69999,
+    "storage": "128GB",
+    "ram": "6GB",
+    "display": "6.1 inch Super Retina XDR",
+    "camera": "48MP + 12MP",
+    "battery": "3349mAh",
+    "processor": "Apple A16 Bionic"
+  },
+  {
+    "id": 2,
+    "brand": "Samsung",
+    "model": "Galaxy S24",
+    "price": 74999,
+    "storage": "256GB",
+    "ram": "8GB",
+    "display": "6.2 inch Dynamic AMOLED",
+    "camera": "50MP + 12MP + 10MP",
+    "battery": "4000mAh",
+    "processor": "Snapdragon 8 Gen 3"
+  },
+  {
+    "id": 3,
+    "brand": "OnePlus",
+    "model": "12",
+    "price": 64999,
+    "storage": "256GB",
+    "ram": "12GB",
+    "display": "6.82 inch AMOLED",
+    "camera": "50MP + 64MP + 48MP",
+    "battery": "5400mAh",
+    "processor": "Snapdragon 8 Gen 3"
+  },
+  {
+    "id": 4,
+    "brand": "Google",
+    "model": "Pixel 8",
+    "price": 75999,
+    "storage": "128GB",
+    "ram": "8GB",
+    "display": "6.2 inch OLED",
+    "camera": "50MP + 12MP",
+    "battery": "4575mAh",
+    "processor": "Google Tensor G3"
+  },
+  {
+    "id": 5,
+    "brand": "Xiaomi",
+    "model": "14",
+    "price": 69999,
+    "storage": "512GB",
+    "ram": "12GB",
+    "display": "6.36 inch AMOLED",
+    "camera": "50MP + 50MP + 50MP",
+    "battery": "4610mAh",
+    "processor": "Snapdragon 8 Gen 3"
+  },
+  {
+    "id": 6,
+    "brand": "Nothing",
+    "model": "Phone 2",
+    "price": 44999,
+    "storage": "256GB",
+    "ram": "12GB",
+    "display": "6.7 inch OLED",
+    "camera": "50MP + 50MP",
+    "battery": "4700mAh",
+    "processor": "Snapdragon 8+ Gen 1"
+  },
+  {
+    "id": 7,
+    "brand": "Vivo",
+    "model": "X100",
+    "price": 63999,
+    "storage": "256GB",
+    "ram": "12GB",
+    "display": "6.78 inch AMOLED",
+    "camera": "50MP + 50MP + 64MP",
+    "battery": "5000mAh",
+    "processor": "MediaTek Dimensity 9300"
+  },
+  {
+    "id": 8,
+    "brand": "Oppo",
+    "model": "Find X7",
+    "price": 59999,
+    "storage": "256GB",
+    "ram": "12GB",
+    "display": "6.78 inch AMOLED",
+    "camera": "50MP + 50MP + 64MP",
+    "battery": "5000mAh",
+    "processor": "MediaTek Dimensity 9300"
+  },
+  {
+    "id": 9,
+    "brand": "Realme",
+    "model": "GT 6",
+    "price": 40999,
+    "storage": "256GB",
+    "ram": "12GB",
+    "display": "6.78 inch AMOLED",
+    "camera": "50MP + 50MP",
+    "battery": "5500mAh",
+    "processor": "Snapdragon 8s Gen 3"
+  },
+  {
+    "id": 10,
+    "brand": "Motorola",
+    "model": "Edge 50 Pro",
+    "price": 31999,
+    "storage": "256GB",
+    "ram": "12GB",
+    "display": "6.7 inch pOLED",
+    "camera": "50MP + 13MP + 10MP",
+    "battery": "4500mAh",
+    "processor": "Snapdragon 7 Gen 3"
+  }
+]

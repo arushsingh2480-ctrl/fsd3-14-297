@@ -18,6 +18,9 @@ const server = http.createServer(async(requestAnimationFrame,res)=>{
         const data=createReadStream("Product.html");
         data.pipe(res);
     }
+    else{
+        res.end("<h1>Home Page</h1>")
+    }
 });
 
 server.listen(3000, ()=>console.log("server is running at 3000..."));
