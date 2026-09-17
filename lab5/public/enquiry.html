@@ -1,0 +1,507 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Enquiry — Apple</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .enquiry-page {
+            min-height: calc(100vh - 58px);
+
+            padding: 80px 20px;
+
+            background: #f5f5f7;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .enquiry-container {
+            width: 100%;
+            max-width: 1050px;
+
+            display: grid;
+            grid-template-columns: 1fr 1.3fr;
+
+            background: white;
+
+            border-radius: 30px;
+
+            overflow: hidden;
+
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.12);
+        }
+
+
+        /* LEFT SIDE */
+
+        .enquiry-info {
+            background: #111;
+            color: white;
+
+            padding: 60px 45px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .enquiry-info .eyebrow {
+            color: #2997ff;
+        }
+
+        .enquiry-info h1 {
+            font-size: 50px;
+            letter-spacing: -3px;
+
+            line-height: 1.05;
+
+            margin-bottom: 25px;
+        }
+
+        .enquiry-info>p {
+            color: #aaa;
+
+            line-height: 1.7;
+
+            margin-bottom: 40px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+
+            gap: 15px;
+
+            margin-bottom: 25px;
+        }
+
+        .contact-icon {
+            width: 42px;
+            height: 42px;
+
+            border-radius: 50%;
+
+            background: #222;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 18px;
+        }
+
+        .contact-item h4 {
+            margin-bottom: 5px;
+        }
+
+        .contact-item p {
+            color: #999;
+            font-size: 14px;
+        }
+
+
+        /* FORM */
+
+        .enquiry-form {
+            padding: 60px 50px;
+        }
+
+        .enquiry-form h2 {
+            font-size: 35px;
+
+            letter-spacing: -1.5px;
+
+            margin-bottom: 10px;
+        }
+
+        .form-description {
+            color: #6e6e73;
+
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+
+            font-size: 14px;
+
+            font-weight: 600;
+
+            margin-bottom: 8px;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+
+            width: 100%;
+
+            padding: 14px 16px;
+
+            border: 1px solid #d2d2d7;
+
+            border-radius: 12px;
+
+            font-family: inherit;
+
+            font-size: 15px;
+
+            outline: none;
+
+            transition: 0.25s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+
+            border-color: #0071e3;
+
+            box-shadow: 0 0 0 3px rgba(0, 113, 227, 0.12);
+        }
+
+        .form-group textarea {
+            height: 130px;
+
+            resize: vertical;
+        }
+
+        .submit-btn {
+            width: 100%;
+
+            border: none;
+
+            background: #0071e3;
+
+            color: white;
+
+            padding: 15px;
+
+            border-radius: 30px;
+
+            font-size: 16px;
+
+            font-family: inherit;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+        }
+
+        .submit-btn:hover {
+            background: #0077ed;
+
+            transform: translateY(-2px);
+        }
+
+
+        /* RESPONSIVE */
+
+        @media (max-width: 800px) {
+
+            .enquiry-container {
+                grid-template-columns: 1fr;
+            }
+
+            .enquiry-info {
+                padding: 45px 30px;
+            }
+
+            .enquiry-form {
+                padding: 45px 30px;
+            }
+
+            .enquiry-info h1 {
+                font-size: 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            Apple
+        </div>
+
+        <ul class="nav-links">
+
+            <li><a href="index.html">Store</a></li>
+            <li><a href="index.html">Mac</a></li>
+            <li><a href="index.html">iPhone</a></li>
+            <li><a href="index.html">iPad</a></li>
+            <li><a href="index.html">Watch</a></li>
+            <li><a href="index.html">AirPods</a></li>
+            <li><a href="about-us.html">About</a></li>
+            <li><a href="enquiry-page.html">Contact</a></li>
+
+        </ul>
+
+        <div class="nav-icons">
+
+            <span>⌕</span>
+            <span>▢</span>
+
+        </div>
+
+    </nav>
+
+
+    <!-- ENQUIRY -->
+
+    <section class="enquiry-page">
+
+        <div class="enquiry-container">
+
+
+            <!-- CONTACT INFORMATION -->
+
+            <div class="enquiry-info">
+
+                <p class="eyebrow">
+                    Get in touch
+                </p>
+
+                <h1>
+                    How can we help?
+                </h1>
+
+                <p>
+                    Have a question about our products or services?
+                    Send us your enquiry and our team will get back
+                    to you.
+                </p>
+
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">
+                        ✉
+                    </div>
+
+                    <div>
+
+                        <h4>Email</h4>
+
+                        <p>
+                            support@example.com
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">
+                        ☎
+                    </div>
+
+                    <div>
+
+                        <h4>Phone</h4>
+
+                        <p>
+                            1800-000-000
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">
+                        ⌖
+                    </div>
+
+                    <div>
+
+                        <h4>Location</h4>
+
+                        <p>
+                            Cupertino, California
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- FORM -->
+
+            <div class="enquiry-form">
+
+                <h2>Send an enquiry</h2>
+
+                <p class="form-description">
+                    Fill in the form below and we'll contact you.
+                </p>
+
+
+                <form>
+
+
+                    <div class="form-group">
+
+                        <label for="name">
+                            Full Name
+                        </label>
+
+                        <input type="text" id="name" placeholder="Enter your name" required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="email">
+                            Email Address
+                        </label>
+
+                        <input type="email" id="email" placeholder="you@example.com" required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="phone">
+                            Phone Number
+                        </label>
+
+                        <input type="tel" id="phone" placeholder="Enter your phone number">
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="subject">
+                            Enquiry Type
+                        </label>
+
+                        <select id="subject">
+
+                            <option value="">
+                                Select an option
+                            </option>
+
+                            <option>
+                                Product Enquiry
+                            </option>
+
+                            <option>
+                                Order Enquiry
+                            </option>
+
+                            <option>
+                                Technical Support
+                            </option>
+
+                            <option>
+                                Business Enquiry
+                            </option>
+
+                            <option>
+                                Other
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="message">
+                            Message
+                        </label>
+
+                        <textarea id="message" placeholder="Tell us how we can help..."></textarea>
+
+                    </div>
+
+
+                    <button type="submit" class="submit-btn">
+                        Send Enquiry
+                    </button>
+
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <div>
+                <h4>Shop</h4>
+                <a href="index.html">Store</a>
+                <a href="index.html">Mac</a>
+                <a href="index.html">iPhone</a>
+                <a href="index.html">iPad</a>
+            </div>
+
+            <div>
+                <h4>Services</h4>
+                <a href="#">Apple Music</a>
+                <a href="#">Apple TV+</a>
+                <a href="#">iCloud</a>
+                <a href="#">Apple Pay</a>
+            </div>
+
+            <div>
+                <h4>Company</h4>
+                <a href="about-us.html">About Us</a>
+                <a href="#">Newsroom</a>
+                <a href="#">Investors</a>
+                <a href="enquiry-page.html">Contact</a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            <p>
+                Copyright © 2026 Apple-inspired concept.
+                All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
+```
